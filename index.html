@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moka - Luxury Beauty</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MOKA</h2>
+                <span class="logo-subtitle">LUXURY BEAUTY</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-icons">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Luxury</span>
+                        <span class="title-line">Redefined</span>
+                    </h1>
+                    <p class="hero-subtitle">Discover the art of beauty with our premium collection of luxury makeup crafted for the discerning woman.</p>
+                    <div class="hero-buttons">
+                        <a href="shop.html" class="btn-primary">Shop Collection</a>
+                        <a href="collections.html" class="btn-secondary">Explore</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://img.freepik.com/premium-photo/beauty-portrait-black-woman-studio-with-glitter-luxury-art-makeup-dark-background-face-gold-african-lady-model-with-rich-glow-jewelry-elegance-cosmetic-royal-aesthetic_590464-191746.jpg" alt="Moka Beauty Model">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature Collection</h2>
+                <p class="section-subtitle">Our most coveted luxury makeup essentials</p>
+            </div>
+            
+            <div class="products-grid" id="featured-products">
+                <!-- Products will be loaded here via JavaScript -->
+            </div>
+            
+            <div class="section-footer">
+                <a href="shop.html" class="btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Preview -->
+    <section class="collections-preview">
+        <div class="container">
+            <div class="collections-grid">
+                <div class="collection-item large">
+                    <div class="collection-bg">
+                        <img src="https://img.freepik.com/premium-photo/art-cosmetics-black-woman-with-gold-makeup-brown-background-glitter-paint-beauty-shine-glow-african-model-studio-fashion-inspiration-aesthetic-freedom-luxury-skincare_590464-225470.jpg" alt="Luxury Lipsticks">
+                        <div class="collection-overlay">
+                            <div class="collection-content">
+                                <h3>Luxury Lipsticks</h3>
+                                <p>Rich, velvety textures in stunning shades</p>
+                                <a href="collections.html?collection=lipsticks" class="btn-secondary">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-item">
+                    <div class="collection-bg">
+                        <img src="https://m.media-amazon.com/images/I/81f1CV2D7kL._UF1000,1000_QL80_.jpg" alt="Eyeshadow Palettes">
+                        <div class="collection-overlay">
+                            <div class="collection-content">
+                                <h3>Eyeshadow Palettes</h3>
+                                <p>Professional artistry collections</p>
+                                <a href="collections.html?collection=eyeshadow" class="btn-secondary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-item">
+                    <div class="collection-bg">
+                        <img src="https://image.made-in-china.com/2f0j00tvqkWaKJECoI/Luxury-Matte-Black-30-50-80-100-130-Ml-Cosmetic-Serum-Lotion-Cream-Packaging-Bottle-with-Gold-Cap.webp" alt="Foundation Collection">
+                        <div class="collection-overlay">
+                            <div class="collection-content">
+                                <h3>Foundation</h3>
+                                <p>Flawless coverage for every skin tone</p>
+                                <a href="collections.html?collection=foundation" class="btn-secondary">Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview parallax-section">
+        <div class="parallax-bg">
+            <img src="https://img.freepik.com/premium-photo/fashion-beauty-spotlight-face-woman-dark-background-studio-makeup-cosmetics-style-creative-art-red-aesthetic-girl-pose-with-vintage-luxury-outfit-designer-accessories_590464-117806.jpg" alt="Moka Philosophy">
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>The Art of Luxury</h2>
+                    <p>At Moka, we believe beauty is an art form. Each product is meticulously crafted with the finest ingredients and innovative formulas to deliver an unparalleled luxury experience.</p>
+                    <a href="about.html" class="btn-primary">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in the Know</h2>
+                <p>Be the first to discover our latest collections and exclusive offers</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>MOKA</h3>
+                        <span>LUXURY BEAUTY</span>
+                    </div>
+                    <p>Redefining beauty through luxury and innovation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="collections.html?collection=lipsticks">Lipsticks</a></li>
+                        <li><a href="collections.html?collection=eyeshadow">Eyeshadow</a></li>
+                        <li><a href="collections.html?collection=foundation">Foundation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Moka Luxury Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-content" id="cart-content">
+            <div class="empty-cart" id="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your bag is empty</p>
+                <a href="shop.html" class="btn-primary">Start Shopping</a>
+            </div>
+            
+            <div class="cart-items" id="cart-items" style="display: none;">
+                <!-- Cart items will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-secondary" onclick="toggleCart()">Continue Shopping</button>
+                <button class="btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

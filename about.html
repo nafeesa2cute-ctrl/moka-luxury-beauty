@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Moka Luxury Beauty</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MOKA</h2>
+                <span class="logo-subtitle">LUXURY BEAUTY</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-icons">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-bg">
+            <img src="https://img.freepik.com/premium-photo/fashion-woman-hat-beauty-thinking-with-makeup-elegance-glamour-with-luxury-studio-background-designer-clothes-black-aesthetic-female-model-with-vintage-style-cosmetic-shine_590464-203966.jpg" alt="About Moka">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>About</span>
+                </nav>
+                <h1 class="hero-title">Our Story</h1>
+                <p class="hero-subtitle">Where luxury meets artistry in the world of beauty</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 class="section-title">The Art of Beauty</h2>
+                    <p class="story-intro">Founded in 2020, Moka represents the pinnacle of luxury beauty, where each product is a masterpiece of craftsmanship and innovation.</p>
+                    
+                    <div class="story-paragraphs">
+                        <p>Our journey began with a simple belief: beauty should be an art form that empowers and inspires. We set out to create more than just makeup – we crafted experiences that transform not just how you look, but how you feel.</p>
+                        
+                        <p>Every Moka product is meticulously developed using the finest ingredients sourced from around the world. Our formulations combine cutting-edge technology with time-honored beauty traditions, resulting in products that deliver exceptional performance and luxurious textures.</p>
+                        
+                        <p>We believe that true luxury lies in the details – from our signature rose-gold packaging to our innovative formulas that adapt to your unique beauty. Each product tells a story of dedication, artistry, and the relentless pursuit of perfection.</p>
+                    </div>
+                </div>
+                
+                <div class="story-image">
+                    <img src="https://img.freepik.com/premium-photo/beauty-neon-shadow-light-portrait-woman-with-dark-lighting-facial-cosmetics-skincare-glow-luxury-studio-makeup-aesthetic-creativity-face-model-with-creative-pink-blue-color-design_590464-123720.jpg" alt="Moka Beauty Philosophy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Luxury Redefined</h3>
+                    <p>We believe luxury should be accessible to everyone who appreciates quality and craftsmanship. Our products deliver premium experiences without compromise.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Beauty</h3>
+                    <p>Committed to environmental responsibility, we use sustainable packaging and cruelty-free formulations that are kind to both you and the planet.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Artistry & Innovation</h3>
+                    <p>Every product is created by master artisans and backed by scientific innovation, ensuring both beauty and performance in every application.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Inclusive Beauty</h3>
+                    <p>Beauty has no boundaries. Our extensive shade ranges and universal formulations celebrate the diversity and uniqueness of every individual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Artisans</h2>
+                <p class="section-subtitle">The visionaries behind Moka's luxury creations</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://as2.ftcdn.net/jpg/05/60/13/25/1000_F_560132549_0xNn9UUvEd7PHkreYMrg1HcWolj474I6.jpg" alt="Sophia Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sophia Chen</h3>
+                        <p class="member-role">Founder & Creative Director</p>
+                        <p class="member-bio">With over 15 years in luxury beauty, Sophia's vision has shaped Moka into a brand that celebrates individual artistry and self-expression.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://img.freepik.com/premium-photo/beauty-makeup-lipstick-portrait-black-woman-dark-studio-with-platinum-hair-isolated-grey-background-art-aesthetic-cosmetics-african-model-with-hand-face-luxury-spa-facial_590464-167451.jpg" alt="Isabella Rodriguez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Isabella Rodriguez</h3>
+                        <p class="member-role">Head of Product Development</p>
+                        <p class="member-bio">Isabella leads our innovation lab, where cutting-edge formulations meet luxury aesthetics to create products that exceed expectations.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://www.shutterstock.com/image-photo/beauty-portrait-african-american-girl-600nw-1845326779.jpg" alt="Amara Johnson">
+                    </div>
+                    <div class="member-info">
+                        <h3>Amara Johnson</h3>
+                        <p class="member-role">Master Color Artist</p>
+                        <p class="member-bio">Amara's expertise in color theory and pigment development ensures every Moka shade is perfectly balanced and universally flattering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Craft</h2>
+                <p class="section-subtitle">The meticulous process behind every Moka product</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Inspiration</h3>
+                        <p>Every product begins with inspiration drawn from art, nature, and the diverse beauty of our community.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Formulation</h3>
+                        <p>Our chemists and artisans collaborate to create unique formulations using the finest ingredients.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Testing</h3>
+                        <p>Rigorous testing ensures each product meets our exacting standards for quality and performance.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Craftsmanship</h3>
+                        <p>Hand-crafted in small batches, each product receives individual attention to ensure perfection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment -->
+    <section class="commitment-section parallax-section">
+        <div class="parallax-bg">
+            <img src="https://img.freepik.com/premium-photo/art-cosmetics-black-woman-with-gold-makeup-brown-background-glitter-paint-beauty-shine-glow-african-model-studio-fashion-inspiration-aesthetic-freedom-luxury-skincare_590464-225470.jpg" alt="Our Commitment">
+        </div>
+        <div class="container">
+            <div class="commitment-content">
+                <h2>Our Commitment to You</h2>
+                <p>At Moka, we promise to deliver not just beautiful products, but transformative experiences that celebrate your unique beauty. Every interaction with our brand should leave you feeling empowered, confident, and radiant.</p>
+                
+                <div class="commitment-stats">
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Cruelty-Free</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Shade Range</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">96%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Beauty Journey</h2>
+                <p>Be the first to discover new collections and exclusive behind-the-scenes content</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>MOKA</h3>
+                        <span>LUXURY BEAUTY</span>
+                    </div>
+                    <p>Redefining beauty through luxury and innovation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="collections.html?collection=lipsticks">Lipsticks</a></li>
+                        <li><a href="collections.html?collection=eyeshadow">Eyeshadow</a></li>
+                        <li><a href="collections.html?collection=foundation">Foundation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Moka Luxury Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-content" id="cart-content">
+            <div class="empty-cart" id="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your bag is empty</p>
+                <a href="shop.html" class="btn-primary">Start Shopping</a>
+            </div>
+            
+            <div class="cart-items" id="cart-items" style="display: none;">
+                <!-- Cart items will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-secondary" onclick="toggleCart()">Continue Shopping</button>
+                <button class="btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(74, 44, 74, 0.6) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--light-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .our-story {
+            padding: 6rem 0;
+        }
+        
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .story-intro {
+            font-size: 1.3rem;
+            color: var(--rose-gold);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .story-paragraphs p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .story-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .values-section {
+            padding: 6rem 0;
+            background: var(--dark-gray);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-card {
+            background: var(--medium-gray);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .value-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .value-card p {
+            line-height: 1.6;
+        }
+        
+        .team-section {
+            padding: 6rem 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .member-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--primary-gold);
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+        
+        .member-role {
+            color: var(--rose-gold);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .member-bio {
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .process-section {
+            padding: 6rem 0;
+            background: var(--dark-gray);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .process-step {
+            text-align: center;
+        }
+        
+        .step-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .step-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .step-content p {
+            line-height: 1.6;
+        }
+        
+        .commitment-section {
+            position: relative;
+            padding: 8rem 0;
+            overflow: hidden;
+        }
+        
+        .commitment-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .commitment-content h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+        
+        .commitment-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: var(--white);
+        }
+        
+        .commitment-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .stat-label {
+            color: var(--white);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .commitment-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</body>
+</html>

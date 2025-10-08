@@ -1,0 +1,396 @@
+/* ===== KEYFRAMES & ANIMATIONS ===== */
+
+/* Shimmer effect for hover animations */
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        transform: scale(1.02);
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in from left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in from right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== ENHANCED BUTTON ANIMATIONS ===== */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #d4af37, #e8b4b8, #d4af37, #e8b4b8);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    animation: glowPulse 0.6s ease-in-out;
+}
+
+.btn-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--rose-gold);
+    z-index: -1;
+    transition: left 0.3s ease;
+}
+
+.btn-secondary:hover::before {
+    left: 0;
+}
+
+/* ===== PRODUCT CARD ANIMATIONS ===== */
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.product-card:hover::before {
+    transform: scale(1);
+}
+
+.product-card:hover {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Shimmer effect on product images */
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(232, 180, 184, 0.3), transparent);
+    transition: left 0.8s;
+}
+
+.product-card:hover .product-image::after {
+    left: 100%;
+}
+
+/* ===== NAVIGATION ANIMATIONS ===== */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(232, 180, 184, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+
+/* Cart icon pulse */
+.cart-icon:hover {
+    animation: glowPulse 0.5s ease;
+}
+
+/* ===== HERO ANIMATIONS ===== */
+.hero-title .title-line {
+    display: inline-block;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.hero-title .title-line:nth-child(2) {
+    animation: fadeInRight 1s ease-out 0.3s both;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-buttons {
+    animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.hero-image {
+    animation: scaleIn 1s ease-out 0.5s both;
+}
+
+.hero-image img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2) contrast(1.1);
+}
+
+/* ===== PARALLAX EFFECTS ===== */
+.parallax-section {
+    position: relative;
+}
+
+.parallax-bg {
+    transition: transform 0.1s ease-out;
+}
+
+/* ===== COLLECTION ITEM ANIMATIONS ===== */
+.collection-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-overlay {
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(74, 44, 74, 0.6) 100%);
+    transition: all 0.4s ease;
+}
+
+.collection-item:hover .collection-overlay {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(74, 44, 74, 0.8) 100%);
+}
+
+.collection-content {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.collection-item:hover .collection-content {
+    transform: translateY(0);
+}
+
+/* ===== SECTION ANIMATIONS ===== */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-gold);
+    border-radius: 2px;
+}
+
+/* ===== FORM ANIMATIONS ===== */
+.input-group {
+    position: relative;
+}
+
+.input-group::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.input-group:focus-within::before {
+    width: 100%;
+}
+
+.input-group input {
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background: var(--dark-gray);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* ===== CART ANIMATIONS ===== */
+.cart-sidebar {
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cart-sidebar.open {
+    transform: translateX(0);
+}
+
+.cart-overlay {
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading-skeleton {
+    background: linear-gradient(90deg, var(--medium-gray) 25%, var(--dark-gray) 50%, var(--medium-gray) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* ===== INTERACTIVE EFFECTS ===== */
+.interactive-glow {
+    transition: all 0.3s ease;
+}
+
+.interactive-glow:hover {
+    box-shadow: 0 0 30px rgba(232, 180, 184, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ===== MOBILE SPECIFIC ANIMATIONS ===== */
+@media (max-width: 768px) {
+    .hero-title .title-line {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero-title .title-line:nth-child(2) {
+        animation: fadeInUp 1s ease-out 0.2s both;
+    }
+    
+    .product-card:hover {
+        animation: none;
+        transform: translateY(-5px);
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

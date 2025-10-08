@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Moka Luxury Beauty</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MOKA</h2>
+                <span class="logo-subtitle">LUXURY BEAUTY</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link active">Collections</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-icons">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="collections-hero">
+        <div class="hero-bg">
+            <img src="https://img.freepik.com/premium-photo/beauty-neon-shadow-light-portrait-woman-with-dark-lighting-facial-cosmetics-skincare-glow-luxury-studio-makeup-aesthetic-creativity-face-model-with-creative-pink-blue-color-design_590464-123720.jpg" alt="Moka Collections">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Collections</span>
+                </nav>
+                <h1 class="hero-title">Curated Collections</h1>
+                <p class="hero-subtitle">Discover our expertly crafted beauty collections, each telling its own unique story</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Categories -->
+    <section class="collection-categories">
+        <div class="container">
+            <div class="categories-nav">
+                <button class="category-nav-btn active" data-category="all">All Collections</button>
+                <button class="category-nav-btn" data-category="lipsticks">Lipsticks</button>
+                <button class="category-nav-btn" data-category="eyeshadow">Eyeshadow</button>
+                <button class="category-nav-btn" data-category="foundation">Foundation</button>
+                <button class="category-nav-btn" data-category="seasonal">Seasonal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Grid -->
+    <section class="collections-grid-section">
+        <div class="container">
+            <!-- Signature Lipstick Collection -->
+            <div class="collection-showcase" data-category="lipsticks">
+                <div class="collection-header">
+                    <div class="collection-info">
+                        <span class="collection-badge">Signature Collection</span>
+                        <h2 class="collection-title">Velvet Matte Lipsticks</h2>
+                        <p class="collection-description">Our most coveted lipstick collection featuring 12 stunning shades with a luxurious matte finish that lasts all day. Each shade is carefully crafted to complement every skin tone.</p>
+                        <div class="collection-features">
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>12-hour wear</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Vegan formula</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Cruelty-free</span>
+                            </div>
+                        </div>
+                        <div class="collection-price">From $85</div>
+                        <a href="shop.html?category=lipstick" class="btn-primary">Explore Collection</a>
+                    </div>
+                    <div class="collection-image">
+                        <img src="https://www.visonpack.com/wp-content/uploads/2023/11/Charlotte-Tilbury-rose-gold-jpg.webp" alt="Velvet Matte Lipsticks">
+                    </div>
+                </div>
+                
+                <div class="collection-products">
+                    <h3>Featured Shades</h3>
+                    <div class="shade-grid">
+                        <div class="shade-item">
+                            <div class="shade-swatch" style="background: #8B0000;"></div>
+                            <span class="shade-name">Rouge Noir</span>
+                        </div>
+                        <div class="shade-item">
+                            <div class="shade-swatch" style="background: #CD5C5C;"></div>
+                            <span class="shade-name">Midnight Rose</span>
+                        </div>
+                        <div class="shade-item">
+                            <div class="shade-swatch" style="background: #DAA520;"></div>
+                            <span class="shade-name">Golden Dawn</span>
+                        </div>
+                        <div class="shade-item">
+                            <div class="shade-swatch" style="background: #4B0082;"></div>
+                            <span class="shade-name">Deep Plum</span>
+                        </div>
+                        <div class="shade-item">
+                            <div class="shade-swatch" style="background: #DC143C;"></div>
+                            <span class="shade-name">Classic Red</span>
+                        </div>
+                        <div class="shade-item">
+                            <div class="shade-swatch" style="background: #D2B48C;"></div>
+                            <span class="shade-name">Nude Elegance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Eyeshadow Collection -->
+            <div class="collection-showcase" data-category="eyeshadow">
+                <div class="collection-header reverse">
+                    <div class="collection-image">
+                        <img src="https://m.media-amazon.com/images/I/81f1CV2D7kL._UF1000,1000_QL80_.jpg" alt="Professional Eyeshadow Palettes">
+                    </div>
+                    <div class="collection-info">
+                        <span class="collection-badge">Professional Line</span>
+                        <h2 class="collection-title">Luxury Eyeshadow Palettes</h2>
+                        <p class="collection-description">Professional-grade eyeshadow palettes designed for creating endless looks. Each palette features 12 highly pigmented shades in complementary tones.</p>
+                        <div class="collection-features">
+                            <div class="feature-item">
+                                <i class="fas fa-palette"></i>
+                                <span>12 shades per palette</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-sparkles"></i>
+                                <span>Matte & Shimmer finishes</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-brush"></i>
+                                <span>Blendable formula</span>
+                            </div>
+                        </div>
+                        <div class="collection-price">From $125</div>
+                        <a href="shop.html?category=eyeshadow" class="btn-primary">Explore Collection</a>
+                    </div>
+                </div>
+                
+                <div class="collection-products">
+                    <h3>Available Palettes</h3>
+                    <div class="palette-grid">
+                        <div class="palette-item">
+                            <h4>Nude Elegance</h4>
+                            <p>Warm neutral tones</p>
+                        </div>
+                        <div class="palette-item">
+                            <h4>Smoky Nights</h4>
+                            <p>Deep dramatic shades</p>
+                        </div>
+                        <div class="palette-item">
+                            <h4>Rose Gold Dreams</h4>
+                            <p>Pink and gold tones</p>
+                        </div>
+                        <div class="palette-item">
+                            <h4>Bold & Beautiful</h4>
+                            <p>Vibrant statement colors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flawless Foundation Collection -->
+            <div class="collection-showcase" data-category="foundation">
+                <div class="collection-header">
+                    <div class="collection-info">
+                        <span class="collection-badge">Inclusive Beauty</span>
+                        <h2 class="collection-title">Flawless Foundation Range</h2>
+                        <p class="collection-description">Our comprehensive foundation range offers 40 inclusive shades designed to match every skin tone perfectly. Lightweight yet full-coverage formula.</p>
+                        <div class="collection-features">
+                            <div class="feature-item">
+                                <i class="fas fa-tint"></i>
+                                <span>40 inclusive shades</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-sun"></i>
+                                <span>SPF 30 protection</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-droplet"></i>
+                                <span>Buildable coverage</span>
+                            </div>
+                        </div>
+                        <div class="collection-price">From $95</div>
+                        <a href="shop.html?category=foundation" class="btn-primary">Explore Collection</a>
+                    </div>
+                    <div class="collection-image">
+                        <img src="https://image.made-in-china.com/2f0j00tvqkWaKJECoI/Luxury-Matte-Black-30-50-80-100-130-Ml-Cosmetic-Serum-Lotion-Cream-Packaging-Bottle-with-Gold-Cap.webp" alt="Flawless Foundation">
+                    </div>
+                </div>
+                
+                <div class="collection-products">
+                    <h3>Shade Finder</h3>
+                    <div class="shade-finder">
+                        <p>Find your perfect match with our inclusive shade range</p>
+                        <div class="shade-spectrum">
+                            <div class="spectrum-bar"></div>
+                            <div class="shade-labels">
+                                <span>Fair</span>
+                                <span>Light</span>
+                                <span>Medium</span>
+                                <span>Tan</span>
+                                <span>Deep</span>
+                                <span>Rich</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seasonal Collection -->
+            <div class="collection-showcase" data-category="seasonal">
+                <div class="collection-header reverse">
+                    <div class="collection-image">
+                        <img src="https://reallyree.com/wp-content/uploads/2016/09/models-own-gilt-rose-gold-collection-review.jpg" alt="Holiday Collection">
+                    </div>
+                    <div class="collection-info">
+                        <span class="collection-badge">Limited Edition</span>
+                        <h2 class="collection-title">Holiday Rose Gold</h2>
+                        <p class="collection-description">A limited edition holiday collection featuring our signature rose gold packaging and exclusive festive shades perfect for the season.</p>
+                        <div class="collection-features">
+                            <div class="feature-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Limited edition</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star"></i>
+                                <span>Exclusive shades</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-box"></i>
+                                <span>Gift-ready packaging</span>
+                            </div>
+                        </div>
+                        <div class="collection-price">From $150</div>
+                        <a href="shop.html?featured=true" class="btn-primary">Explore Collection</a>
+                    </div>
+                </div>
+                
+                <div class="collection-products">
+                    <h3>What's Inside</h3>
+                    <div class="holiday-items">
+                        <div class="holiday-item">
+                            <i class="fas fa-lips"></i>
+                            <div>
+                                <h4>Festive Lipstick Trio</h4>
+                                <p>Three exclusive holiday shades</p>
+                            </div>
+                        </div>
+                        <div class="holiday-item">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <h4>Glitter Eyeshadow Palette</h4>
+                                <p>Sparkling holiday colors</p>
+                            </div>
+                        </div>
+                        <div class="holiday-item">
+                            <i class="fas fa-brush"></i>
+                            <div>
+                                <h4>Rose Gold Brush Set</h4>
+                                <p>Limited edition tools</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Benefits -->
+    <section class="collection-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Our Collections</h2>
+                <p class="section-subtitle">Every collection is thoughtfully curated to deliver exceptional results</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Expert Curation</h3>
+                    <p>Each collection is carefully curated by our team of makeup artists and color specialists.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Premium Formulas</h3>
+                    <p>Advanced formulations using the finest ingredients for superior performance and comfort.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Color Harmony</h3>
+                    <p>Thoughtfully coordinated shades that work beautifully together for effortless looks.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Exclusive Access</h3>
+                    <p>Access to limited edition collections and exclusive shades not available elsewhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Be the First to Know</h2>
+                <p>Get early access to new collections and exclusive member benefits</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>MOKA</h3>
+                        <span>LUXURY BEAUTY</span>
+                    </div>
+                    <p>Redefining beauty through luxury and innovation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="collections.html?collection=lipsticks">Lipsticks</a></li>
+                        <li><a href="collections.html?collection=eyeshadow">Eyeshadow</a></li>
+                        <li><a href="collections.html?collection=foundation">Foundation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Moka Luxury Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-content" id="cart-content">
+            <div class="empty-cart" id="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your bag is empty</p>
+                <a href="shop.html" class="btn-primary">Start Shopping</a>
+            </div>
+            
+            <div class="cart-items" id="cart-items" style="display: none;">
+                <!-- Cart items will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-secondary" onclick="toggleCart()">Continue Shopping</button>
+                <button class="btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    
+    <script>
+        // Collections page specific JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryBtns = document.querySelectorAll('.category-nav-btn');
+            const collections = document.querySelectorAll('.collection-showcase');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const category = btn.dataset.category;
+                    
+                    // Filter collections
+                    collections.forEach(collection => {
+                        if (category === 'all' || collection.dataset.category === category) {
+                            collection.style.display = 'block';
+                            collection.classList.add('scroll-reveal');
+                        } else {
+                            collection.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Check URL parameters for specific collection
+            const urlParams = new URLSearchParams(window.location.search);
+            const collection = urlParams.get('collection');
+            if (collection) {
+                const btn = document.querySelector(`[data-category="${collection}"]`);
+                if (btn) {
+                    btn.click();
+                }
+            }
+        });
+    </script>
+    
+    <style>
+        /* Collections Page Specific Styles */
+        .collections-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .collection-categories {
+            padding: 2rem 0;
+            background: var(--dark-gray);
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .categories-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-nav-btn {
+            padding: 0.75rem 2rem;
+            background: transparent;
+            border: 2px solid var(--medium-gray);
+            color: var(--light-gray);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .category-nav-btn:hover,
+        .category-nav-btn.active {
+            background: var(--gradient-gold);
+            border-color: var(--primary-gold);
+            color: var(--black);
+        }
+        
+        .collections-grid-section {
+            padding: 4rem 0;
+        }
+        
+        .collection-showcase {
+            margin-bottom: 6rem;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .collection-showcase:last-child {
+            border-bottom: none;
+        }
+        
+        .collection-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .collection-header.reverse {
+            direction: rtl;
+        }
+        
+        .collection-header.reverse > * {
+            direction: ltr;
+        }
+        
+        .collection-badge {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .collection-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .collection-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--light-gray);
+        }
+        
+        .collection-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--light-gray);
+        }
+        
+        .feature-item i {
+            color: var(--primary-gold);
+            font-size: 1.1rem;
+        }
+        
+        .collection-price {
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .collection-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .collection-products {
+            background: var(--dark-gray);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+        
+        .collection-products h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .shade-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .shade-item {
+            text-align: center;
+        }
+        
+        .shade-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 0.75rem;
+            border: 3px solid var(--medium-gray);
+            transition: var(--transition);
+        }
+        
+        .shade-item:hover .shade-swatch {
+            border-color: var(--primary-gold);
+            transform: scale(1.1);
+        }
+        
+        .shade-name {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            font-weight: 500;
+        }
+        
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .palette-item {
+            background: var(--medium-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .palette-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .palette-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+        
+        .palette-item p {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        .shade-finder {
+            text-align: center;
+        }
+        
+        .shade-finder p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .shade-spectrum {
+            position: relative;
+        }
+        
+        .spectrum-bar {
+            height: 40px;
+            border-radius: 20px;
+            background: linear-gradient(to right, 
+                #F5DEB3 0%, 
+                #DEB887 16.66%, 
+                #D2B48C 33.33%, 
+                #BC9A6A 50%, 
+                #8B4513 66.66%, 
+                #654321 83.33%, 
+                #3C1810 100%);
+            margin-bottom: 1rem;
+        }
+        
+        .shade-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--light-gray);
+        }
+        
+        .holiday-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .holiday-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--medium-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .holiday-item i {
+            font-size: 2rem;
+            color: var(--primary-gold);
+            min-width: 40px;
+        }
+        
+        .holiday-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--white);
+        }
+        
+        .holiday-item p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+        }
+        
+        .collection-benefits {
+            padding: 6rem 0;
+            background: var(--dark-gray);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: var(--medium-gray);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .benefit-card p {
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 1024px) {
+            .collection-header {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .collection-header.reverse {
+                direction: ltr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .categories-nav {
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .category-nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .collection-showcase {
+                margin-bottom: 4rem;
+                padding: 2rem 0;
+            }
+            
+            .collection-products {
+                padding: 2rem 1rem;
+            }
+            
+            .shade-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
+            .palette-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .holiday-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
